@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "PlaylistHot":"/components/HotPlaylist/index"
+  }
+}

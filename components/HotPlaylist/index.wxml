@@ -1,0 +1,20 @@
+<!--components/HotPlayList/index.wxml-->
+<view class="container">
+  <view  class="content">
+      <view wx:for="{{playlist}}" data-id="{{item.id}}" wx:key="{{item.id}}" class="image-item">
+      <view class="image-inner">
+      <navigator url="/pages/detail/detail?tabid={{item.id}}&index={{index}}">
+          <view class="image-card">
+              <image mode="widthFix" style="width:100%"  src="{{item.coverImgUrl}}"></image>
+              <view class="play-info">
+                <text class="iconfont icon-erji icon"></text>
+                <text>{{ item.playCount}}</text>
+              </view>
+          </view>
+            <text class="image-info">{{item.name}}</text>
+          </navigator>
+        </view>
+       
+      </view>
+    </view>
+</view>

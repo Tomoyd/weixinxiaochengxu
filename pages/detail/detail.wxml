@@ -1,0 +1,33 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-container">
+  <view style="background:url({{detailInfo.creator.backgroundUrl}})" class="head-bg"></view>
+  <view class="detail-info">
+    <view class="card-container">
+      <image src="{{detailInfo.coverImgUrl}}" class="image-main" mode="widthFix"></image>
+      <view style="height:100%;flex:1;">
+        <view class="description-plane">
+          <view>
+            <text class="title-detail">{{detailInfo.name}}</text>
+          </view>
+          <view class="description">
+            <image src="{{detailInfo.creator.avatarUrl}}" class="avatar" mode="widthFix"></image>
+            <text>{{detailInfo.creator.nickname}}  ></text>
+          </view>
+          <view class="bottom-info">
+            <view>
+              <text class="description">{{detailInfo.description}} </text>
+            </view>
+            <view>
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list-info">
+    <view  wx:for="{{detailInfo.tracks}}"  wx:key="{{index}}">
+     <navigator class="list-item" url="/pages/play/play?playId={{item.id}}">{{item.name}}</navigator>
+    </view>
+</view>
+</view>

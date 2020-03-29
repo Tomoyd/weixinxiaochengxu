@@ -1,0 +1,38 @@
+/* components/HotPlayList/index.wxss */
+@import "/icons/iconfont.wxss";
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.image-item{
+  width:50%;
+}
+.play-info{
+  color:aliceblue;
+  font-size: 20rpx;
+  position: absolute;
+  top:0;
+  right:2px;
+}
+.play-info .iconfont{
+  margin-right:3px;
+  font-size: 20rpx;
+}
+.image-card{
+  position: relative;
+}
+.image-item:nth-child(2n) .image-inner{
+  padding:5px 5px 5px 3px; 
+}
+.image-item:nth-child(2n+1) .image-inner{
+  padding:5px 3px 5px 5px; 
+}
+.image-info{
+  padding: 5rpx;
+  display: -webkit-box;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient:vertical;
+}
